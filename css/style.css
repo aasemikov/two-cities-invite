@@ -107,6 +107,12 @@ h2.title {
 #bordo {
     filter: brightness(1.5) contrast(0.8);
 }
+#butter {
+    filter: brightness(1.5) contrast(0.8) drop-shadow(1.2);
+}
+#mans {
+    margin-top: 21px;
+}
 
 /* адаптив планшеты */
 @media screen and (max-width: 1024px) {
