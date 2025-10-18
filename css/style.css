@@ -1,0 +1,146 @@
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #f0ede5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Header";
+    font-weight: 400;
+    color: #ff4c00;
+}
+p,
+a,
+li {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+h1.title {
+}
+
+h2.title {
+    font-size: 48px;
+}
+.text-align-center {
+    text-align: center;
+}
+
+.container {
+    width: 768px;
+    margin: 0 auto;
+}
+
+/* второй экран */
+#two {
+    height: 100vh;
+    width: 100vw;
+}
+.two-header-up {
+    padding-top: 21px;
+    height: 15vh;
+}
+.two-header-up h2.title {
+    text-align: left;
+}
+
+.two-subtitle-up {
+    margin-top: 21px;
+}
+.two-subtitle-up p.text {
+    text-align: right;
+}
+
+.two-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+}
+.two-image-container img.two-image {
+    height: 100%;
+}
+
+.two-header-down {
+    height: 15vh;
+}
+.two-header-down h2.title {
+    padding-top: 21px;
+    text-align: right;
+}
+
+.two-subtitle-down p.text {
+    text-align: left;
+}
+
+/* пятый экран */
+.five-header {
+    margin-top: 42px;
+}
+.five-main {
+    margin-top: 21px;
+}
+.dr-code-section {
+    margin-top: 21px;
+}
+.dr-code-images {
+    margin-top: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+.dr-code-image {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+}
+
+/* адаптив планшеты */
+@media screen and (max-width: 1024px) {
+}
+
+/* адапатив маленькие планшеты */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 576px;
+    }
+
+    /* второй экран */
+    #two,
+    .two-header-up,
+    .two-header-down {
+        height: auto;
+    }
+    .two-image-container {
+        margin-top: 21px;
+        margin-bottom: 21px;
+        height: auto;
+    }
+    .two-image-container img.two-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .two-subtitle-up,
+    .two-subtitle-down {
+        width: 70%;
+    }
+    .two-subtitle-up {
+        margin-left: auto;
+        margin-right: 0;
+    }
+}
+
+/* адаптив смартфоны */
+@media screen and (max-width: 576px) {
+    .container {
+        width: 306px;
+    }
+}
