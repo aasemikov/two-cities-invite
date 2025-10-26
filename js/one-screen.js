@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const nastya = document.getElementsByClassName("one-nastya")[0];
     const info = document.getElementsByClassName("one-info")[0];
 
-    const height = 1500;
+    const height = 1250;
     let animationCompleted = false;
     let animationUp = true;
     let rotateLesha = "";
