@@ -2,8 +2,8 @@ body {
     width: 100%;
     height: 100%;
     background-color: #f0ede5;
+    overflow-x: hidden;
 }
-
 h1,
 h2,
 h3,
@@ -21,31 +21,32 @@ li {
     font-weight: 400;
     font-size: 16px;
 }
-
 .screen {
     width: 100vw;
     height: 100vh;
 }
-
 h1.title {
     font-size: 64px;
 }
-
 h2.title {
     font-size: 48px;
 }
 .text-align-center {
     text-align: center;
 }
-
 .container {
     width: 768px;
     margin: 0 auto;
 }
 
 /* первый экран */
-.one {
-    position: relative;
+#one {
+    height: 2000px;
+}
+.one-screen {
+    position: sticky;
+    top: 0;
+    height: 100vh;
 }
 .one-header-up {
     position: absolute;
@@ -66,15 +67,14 @@ h2.title {
 }
 .one-lesha {
     z-index: 10;
-    left: 50%;
-    transform: translate(-80%, -50%);
+    left: 0%;
+    transform: translate(-100%, -50%);
 }
 .one-nastya {
     z-index: 20;
-    right: 50%;
-    transform: translate(80%, -50%);
+    right: 0%;
+    transform: translate(100%, -50%);
 }
-
 /****************/
 
 /* второй экран */
