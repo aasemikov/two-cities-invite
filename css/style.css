@@ -41,7 +41,7 @@ h2.title {
 
 /* первый экран */
 #one {
-    height: 2000px;
+    height: 1500px;
 }
 .one-screen {
     position: sticky;
