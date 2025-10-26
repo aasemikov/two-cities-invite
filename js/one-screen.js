@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let rotateNastya = "";
     let translateXNastya = "";
     let lastScrollBottom = 0;
-    const threshold = 150;
+    const threshold = 100;
 
     window.addEventListener("scroll", () => {
         if (animationCompleted) {
