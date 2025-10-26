@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     const lesha = document.getElementsByClassName("one-lesha")[0];
     const nastya = document.getElementsByClassName("one-nastya")[0];
+    const info = document.getElementsByClassName("one-info")[0];
+
     const height = 2000;
     let animationCompleted = false;
     let animationUp = true;
@@ -9,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let rotateNastya = "";
     let translateXNastya = "";
     let lastScrollBottom = 0;
-    const threshold = 100;
+    const threshold = 150;
 
     window.addEventListener("scroll", () => {
         if (animationCompleted) {
@@ -34,10 +36,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 rotateLesha = `5deg`;
                 rotateNastya = `-5deg`;
                 animationUp = false;
+                info.style.display = 'none';
             } else {
                 rotateLesha = `-5deg`;
                 rotateNastya = `5deg`;
                 animationUp = true;
+                info.style.display = 'block';
             }
 
             lesha.style.left = `${leftPositionLesha}%`;

@@ -43,6 +43,16 @@ h2.title {
 #one {
     height: 1500px;
 }
+.one-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+.one-info p:last-child{
+    transform: rotate(90deg);
+}
 .one-screen {
     position: sticky;
     top: 0;
