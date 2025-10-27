@@ -65,6 +65,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (progress >= 1) {
       animationCompleted = true;
+      lesha.style.left = `${50}%`;
+      nastya.style.right = `${50}%`;
       lesha.style.transform = `translate(${-80}%, -50%)`;
       nastya.style.transform = `translate(${80}%, -50%)`;
       console.log("Анимация завершена!");
