@@ -1,0 +1,229 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: #f0ede5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Header";
+  font-weight: 400;
+  color: #ff4c00;
+}
+p,
+a,
+li {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+h1.title {
+}
+
+h2.title {
+  font-size: 48px;
+}
+h3.title {
+  font-size: 32px;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.container {
+  width: 768px;
+  margin: 0 auto;
+}
+
+/* второй экран */
+#two {
+  height: 100vh;
+  width: 100vw;
+}
+.two-header-up {
+  padding-top: 21px;
+  height: 15vh;
+}
+.two-header-up h2.title {
+  text-align: left;
+}
+
+.two-subtitle-up {
+  margin-top: 21px;
+}
+.two-subtitle-up p.text {
+  text-align: right;
+}
+
+.two-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+}
+.two-image-container img.two-image {
+  height: 100%;
+}
+
+.two-header-down {
+  height: 15vh;
+}
+.two-header-down h2.title {
+  padding-top: 21px;
+  text-align: right;
+}
+
+.two-subtitle-down p.text {
+  text-align: left;
+}
+
+/* третий экран */
+.three {
+  min-height: 550px;
+}
+.three-header {
+  margin-top: 21px;
+  text-align: center;
+}
+.three-heart {
+  width: 100%;
+  height: 525px;
+  position: relative;
+  margin-top: 21px;
+  text-align: center;
+}
+.heart-image {
+  width: 535px;
+  height: 525px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+.three-heart-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.three-heart h3.title,
+.three-heart p.text {
+  position: relative;
+  color: white;
+  z-index: 10;
+}
+.three-heart:last-child h3.title {
+  margin-top: 21px;
+}
+.three-heart p.text {
+  margin-top: 14px;
+}
+
+/***************/
+
+/* четвертый */
+.four-header {
+    margin-top: 42px;
+    text-align: center;
+}
+/***************/
+
+/* пятый экран */
+.five-header {
+  margin-top: 42px;
+}
+.five-main {
+  margin-top: 21px;
+}
+.dr-code-section {
+  margin-top: 21px;
+}
+.dr-code-images {
+  margin-top: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+.dr-code-image {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+}
+#brown {
+  filter: brightness(1.5) contrast(0.8);
+}
+#bordo {
+  filter: brightness(1.5) contrast(0.8);
+}
+#butter {
+  filter: brightness(1.5) contrast(0.8) drop-shadow(1.2);
+}
+#mans {
+  margin-top: 21px;
+}
+
+/* адаптив планшеты */
+@media screen and (max-width: 1024px) {
+}
+
+/* адапатив маленькие планшеты */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 576px;
+  }
+
+  /* второй экран */
+  #two,
+  .two-header-up,
+  .two-header-down {
+    height: auto;
+  }
+  .two-image-container {
+    margin-top: 21px;
+    margin-bottom: 21px;
+    height: auto;
+  }
+  .two-image-container img.two-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .two-subtitle-up,
+  .two-subtitle-down {
+    width: 70%;
+  }
+  .two-subtitle-up {
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+
+/* адаптив смартфоны */
+@media screen and (max-width: 576px) {
+  .container {
+    width: 306px;
+  }
+
+  .three-heart {
+    text-align: left;
+  }
+  .heart-image {
+    left: 0;
+    transform: translateX(-40%);
+    z-index: 0;
+  }
+  .three-heart-text {
+    top: 40%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+}
