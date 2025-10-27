@@ -1,7 +1,6 @@
 body {
-  width: 100%;
-  height: 100%;
-  background-color: #f0ede5;
+  width: 100vw;
+  background-color: #f7edd1;
   overflow-x: hidden;
 }
 h1,
@@ -57,6 +56,7 @@ h2.title {
   position: sticky;
   top: 0;
   height: 100vh;
+  overflow-x: hidden;
 }
 .one-header-up {
   position: absolute;
@@ -66,7 +66,7 @@ h2.title {
 }
 .one-header-down {
   position: absolute;
-  bottom: 7px;
+  bottom: 107px;
   right: 7px;
   text-align: right;
 }
