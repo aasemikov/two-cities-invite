@@ -1,9 +1,9 @@
 /**
     Oks Free Regular 400 Roman
 */
-@font-face {
-  font-family: "Header";
-  src: url("../fonts/header.otf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
+@font-face { 
+  font-family: "Header"; 
+  src: url("../fonts/header.otf") format("truetype"); 
+  font-style: normal; 
+  font-weight: normal; 
 }

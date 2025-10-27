@@ -1,10 +1,9 @@
 body {
-  width: 100vw;
-  height: 100vh;
-  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
   background-color: #f0ede5;
+  overflow-x: hidden;
 }
-
 h1,
 h2,
 h3,
@@ -22,25 +21,71 @@ li {
   font-weight: 400;
   font-size: 16px;
 }
-
-h1.title {
+.screen {
+  width: 100vw;
+  height: 100vh;
 }
-
+h1.title {
+  font-size: 64px;
+}
 h2.title {
   font-size: 48px;
 }
-h3.title {
-  font-size: 32px;
-}
-
 .text-align-center {
   text-align: center;
 }
-
 .container {
   width: 768px;
   margin: 0 auto;
 }
+
+/* первый экран */
+#one {
+  height: 1750px;
+}
+.one-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+.one-info p:last-child {
+  transform: rotate(90deg);
+}
+.one-screen {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+.one-header-up {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  text-align: left;
+}
+.one-header-down {
+  position: absolute;
+  bottom: 7px;
+  right: 7px;
+  text-align: right;
+}
+.one-image {
+  position: absolute;
+  top: 50%;
+  height: 525px;
+}
+.one-lesha {
+  z-index: 10;
+  left: 0%;
+  transform: translate(-100%, -50%);
+}
+.one-nastya {
+  z-index: 20;
+  right: 0%;
+  transform: translate(100%, -50%);
+}
+/****************/
 
 /* второй экран */
 #two {
@@ -131,8 +176,8 @@ h3.title {
 
 /* четвертый */
 .four-header {
-    margin-top: 42px;
-    text-align: center;
+  margin-top: 42px;
+  text-align: center;
 }
 /***************/
 
@@ -180,6 +225,10 @@ h3.title {
   .container {
     width: 576px;
   }
+  /* первый экран */
+  .one-image {
+    height: 425px;
+  }
 
   /* второй экран */
   #two,
@@ -211,6 +260,11 @@ h3.title {
 @media screen and (max-width: 576px) {
   .container {
     width: 306px;
+  }
+
+  /* первый экран */
+  .one-image {
+    height: 325px;
   }
 
   .three-heart {
