@@ -87,11 +87,23 @@ h3.title {
     left: 7px;
     text-align: left;
 }
+.one-header-up img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translate(70%, 80%);
+}
 .one-header-down {
     position: absolute;
     bottom: 107px;
     right: 7px;
     text-align: right;
+}
+.one-header-down img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translate(-40%, -20%);
 }
 .one-image {
     position: absolute;
@@ -110,10 +122,22 @@ h3.title {
 }
 /****************/
 
+.car {
+    position: relative;
+    top: 0;
+    left: 100%;
+}
+.car-active {
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 2s ease 0s;
+}
+
 /* второй экран */
 #two {
     height: 100vh;
     width: 100vw;
+    background: url(../img/background.svg);
 }
 .two-header-up {
     padding-top: 21px;
@@ -153,8 +177,14 @@ h3.title {
 }
 
 /* третий экран */
-.three {
+#three {
     min-height: 550px;
+    position: relative;
+}
+#three img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 .three-header {
     margin-top: 21px;
@@ -205,14 +235,44 @@ h3.title {
 /***************/
 
 /* пятый экран */
+#five {
+    position: relative;
+}
+#one-tufli,
+#two-tufli,
+#three-tufli,
+#four-tufli {
+    position: absolute;
+}
+#one-tufli {
+    top: 15%;
+    left: 0%;
+    transform: translateX(-50%) rotate(35deg);
+}
+#two-tufli {
+    bottom: 35%;
+    left: 0%;
+    transform: translateX(-35%) rotate(125deg);
+}
+#three-tufli {
+    top: 25%;
+    right: 0%;
+    transform: translateX(35%) rotate(-45deg);
+}
+#four-tufli {
+    bottom: 20%;
+    right: 0%;
+    transform: translateX(35%) rotate(-90deg);
+}
+
 .five-header {
     margin-top: 42px;
 }
 .five-main {
-    margin-top: 21px;
+    margin-top: 28px;
 }
 .dr-code-section {
-    margin-top: 21px;
+    margin-top: 35px;
 }
 .dr-code-images {
     margin-top: 7px;
@@ -241,8 +301,17 @@ h3.title {
 .five-info {
     margin-top: 21px;
 }
+#tort {
+    width: 100%;
+    text-align: center;
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
 
 /* шестой экран */
+#six {
+    padding-top: 63px;
+}
 .six-header {
     display: block;
     margin-top: 105px;
@@ -262,6 +331,9 @@ h3.title {
 }
 
 /* седьмой экран */
+#seven {
+    margin-top: 42px;
+}
 .seven-main {
     text-align: right;
 }
