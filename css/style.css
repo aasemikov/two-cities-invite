@@ -3,6 +3,18 @@ body {
     background-color: #f0ede5;
     overflow-x: hidden;
 }
+
+#one,
+#two,
+#three,
+#four,
+#five,
+#six,
+#seven,
+#eight {
+    overflow-x: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -59,6 +71,48 @@ h3.title {
     font-weight: 700;
     color: white;
     border-radius: 14px;
+}
+
+/* Стили для экрана загрузки */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+/* Анимация вращения солнышка */
+.sun {
+    width: 120px;
+    height: 120px;
+    animation: rotate 5s linear infinite;
+    position: relative;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.percentage {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    font-family: "Header", sans-serif;
+}
+
+#main-content {
+    display: none;
 }
 
 /* первый экран */
