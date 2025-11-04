@@ -1,7 +1,7 @@
 body {
-  width: 100vw;
-  background-color: #f0ede5;
-  overflow-x: hidden;
+    width: 100vw;
+    background-color: #f0ede5;
+    overflow-x: hidden;
 }
 h1,
 h2,
@@ -9,214 +9,287 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Header";
-  font-weight: 400;
-  color: #ff4c00;
+    font-family: "Header";
+    font-weight: 400;
+    color: #ff4c00;
 }
 p,
 a,
-li {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
+li,
+input,
+button {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
 }
 .screen {
-  width: 100vw;
-  height: 100vh;
+    width: 100vw;
+    height: 100vh;
 }
 h1.title {
-  font-size: 64px;
+    font-size: 64px;
 }
 h2.title {
-  font-size: 48px;
+    font-size: 48px;
 }
 h3.title {
-  font-size: 32px;
+    font-size: 32px;
 }
 .text-align-center {
-  text-align: center;
+    text-align: center;
+}
+.text-align-left {
+    text-align: left;
+}
+.text-align-right {
+    text-align: right;
 }
 .container {
-  width: 768px;
-  margin: 0 auto;
+    width: 768px;
+    margin: 0 auto;
+}
+.form-input {
+    padding: 7px 14px;
+    border: 1px solid black;
+    border-radius: 14px;
+}
+.form-button {
+    padding: 14px 21px;
+    background-color: #ff8c00;
+    font-weight: 700;
+    color: white;
+    border-radius: 14px;
 }
 
 /* первый экран */
 #one {
-  height: 1750px;
+    height: 1750px;
 }
 .one-info {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  text-align: center;
-  transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
 }
 .one-info p:last-child {
-  transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 .one-screen {
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  overflow-x: hidden;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-x: hidden;
 }
 .one-header-up {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  text-align: left;
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    text-align: left;
 }
 .one-header-down {
-  position: absolute;
-  bottom: 107px;
-  right: 7px;
-  text-align: right;
+    position: absolute;
+    bottom: 107px;
+    right: 7px;
+    text-align: right;
 }
 .one-image {
-  position: absolute;
-  top: 50%;
-  height: 525px;
+    position: absolute;
+    top: 50%;
+    height: 525px;
 }
 .one-lesha {
-  z-index: 10;
-  left: 0%;
-  transform: translate(-100%, -50%);
+    z-index: 10;
+    left: 0%;
+    transform: translate(-100%, -50%);
 }
 .one-nastya {
-  z-index: 20;
-  right: 0%;
-  transform: translate(100%, -50%);
+    z-index: 20;
+    right: 0%;
+    transform: translate(100%, -50%);
 }
 /****************/
 
 /* второй экран */
 #two {
-  height: 100vh;
-  width: 100vw;
+    height: 100vh;
+    width: 100vw;
 }
 .two-header-up {
-  padding-top: 21px;
-  height: 15vh;
+    padding-top: 21px;
+    height: 15vh;
 }
 .two-header-up h2.title {
-  text-align: left;
+    text-align: left;
 }
 
 .two-subtitle-up {
-  margin-top: 21px;
+    margin-top: 21px;
 }
 .two-subtitle-up p.text {
-  text-align: right;
+    text-align: right;
 }
 
 .two-image-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
 }
 .two-image-container img.two-image {
-  height: 100%;
+    height: 100%;
 }
 
 .two-header-down {
-  height: 15vh;
+    height: 15vh;
 }
 .two-header-down h2.title {
-  padding-top: 21px;
-  text-align: right;
+    padding-top: 21px;
+    text-align: right;
 }
 
 .two-subtitle-down p.text {
-  text-align: left;
+    text-align: left;
 }
 
 /* третий экран */
 .three {
-  min-height: 550px;
+    min-height: 550px;
 }
 .three-header {
-  margin-top: 21px;
-  text-align: center;
+    margin-top: 21px;
+    text-align: center;
 }
 .three-heart {
-  width: 100%;
-  height: 525px;
-  position: relative;
-  margin-top: 21px;
-  text-align: center;
+    width: 100%;
+    height: 525px;
+    position: relative;
+    margin-top: 21px;
+    text-align: center;
 }
 .heart-image {
-  width: 535px;
-  height: 525px;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 0;
+    width: 535px;
+    height: 525px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
 }
 .three-heart-text {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .three-heart h3.title,
 .three-heart p.text {
-  position: relative;
-  color: white;
-  z-index: 10;
+    position: relative;
+    color: white;
+    z-index: 10;
 }
 .three-heart:last-child h3.title {
-  margin-top: 21px;
+    margin-top: 21px;
 }
 .three-heart p.text {
-  margin-top: 14px;
+    margin-top: 14px;
 }
 
 /***************/
 
 /* четвертый */
 .four-header {
-  margin-top: 42px;
-  text-align: center;
+    margin-top: 42px;
+    text-align: center;
 }
 /***************/
 
 /* пятый экран */
 .five-header {
-  margin-top: 42px;
+    margin-top: 42px;
 }
 .five-main {
-  margin-top: 21px;
+    margin-top: 21px;
 }
 .dr-code-section {
-  margin-top: 21px;
+    margin-top: 21px;
 }
 .dr-code-images {
-  margin-top: 7px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
+    margin-top: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
 }
 .dr-code-image {
-  width: 64px;
-  height: 64px;
-  object-fit: cover;
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
 }
 #brown {
-  filter: brightness(1.5) contrast(0.8);
+    filter: brightness(1.5) contrast(0.8);
 }
 #bordo {
-  filter: brightness(1.5) contrast(0.8);
+    filter: brightness(1.5) contrast(0.8);
 }
 #butter {
-  filter: brightness(1.5) contrast(0.8) drop-shadow(1.2);
+    filter: brightness(1.5) contrast(0.8) drop-shadow(1.2);
 }
 #mans {
-  margin-top: 21px;
+    margin-top: 21px;
+}
+.five-info {
+    margin-top: 21px;
+}
+
+/* шестой экран */
+.six-header {
+    display: block;
+    margin-top: 105px;
+}
+.six-header-relative {
+    display: inline-block;
+    position: relative;
+}
+.six-header img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-55%, -55%);
+}
+.six-main p {
+    margin-top: 21px;
+}
+
+/* седьмой экран */
+.seven-main {
+    text-align: right;
+}
+.seven-main p,
+.seven-main input,
+.seven-main button {
+    margin-top: 21px;
+}
+.seven-main input {
+    text-align: right;
+}
+
+/* восьмой экран */
+.eigth-main {
+    text-align: right;
+}
+.eigth-main button {
+    margin-top: 21px;
+}
+.eigth-main button a {
+    color: white;
+    font-weight: 700;
+}
+.eigth-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 21px;
 }
 
 /* адаптив планшеты */
@@ -225,62 +298,62 @@ h3.title {
 
 /* адапатив маленькие планшеты */
 @media screen and (max-width: 768px) {
-  .container {
-    width: 576px;
-  }
-  /* первый экран */
-  .one-image {
-    height: 425px;
-  }
+    .container {
+        width: 576px;
+    }
+    /* первый экран */
+    .one-image {
+        height: 425px;
+    }
 
-  /* второй экран */
-  #two,
-  .two-header-up,
-  .two-header-down {
-    height: auto;
-  }
-  .two-image-container {
-    margin-top: 21px;
-    margin-bottom: 21px;
-    height: auto;
-  }
-  .two-image-container img.two-image {
-    width: 100%;
-    height: auto;
-  }
+    /* второй экран */
+    #two,
+    .two-header-up,
+    .two-header-down {
+        height: auto;
+    }
+    .two-image-container {
+        margin-top: 21px;
+        margin-bottom: 21px;
+        height: auto;
+    }
+    .two-image-container img.two-image {
+        width: 100%;
+        height: auto;
+    }
 
-  .two-subtitle-up,
-  .two-subtitle-down {
-    width: 70%;
-  }
-  .two-subtitle-up {
-    margin-left: auto;
-    margin-right: 0;
-  }
+    .two-subtitle-up,
+    .two-subtitle-down {
+        width: 70%;
+    }
+    .two-subtitle-up {
+        margin-left: auto;
+        margin-right: 0;
+    }
 }
 
 /* адаптив смартфоны */
 @media screen and (max-width: 576px) {
-  .container {
-    width: 306px;
-  }
+    .container {
+        width: 306px;
+    }
 
-  /* первый экран */
-  .one-image {
-    height: 325px;
-  }
+    /* первый экран */
+    .one-image {
+        height: 325px;
+    }
 
-  .three-heart {
-    text-align: left;
-  }
-  .heart-image {
-    left: 0;
-    transform: translateX(-40%);
-    z-index: 0;
-  }
-  .three-heart-text {
-    top: 40%;
-    left: 0;
-    transform: translateY(-50%);
-  }
+    .three-heart {
+        text-align: left;
+    }
+    .heart-image {
+        left: 0;
+        transform: translateX(-40%);
+        z-index: 0;
+    }
+    .three-heart-text {
+        top: 40%;
+        left: 0;
+        transform: translateY(-50%);
+    }
 }
