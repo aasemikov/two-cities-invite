@@ -4,7 +4,6 @@ body {
     overflow-x: hidden;
 }
 
-#one,
 #two,
 #three,
 #four,
@@ -111,7 +110,7 @@ h3.title {
     font-family: "Header", sans-serif;
 }
 
-#main-content {
+section {
     display: none;
 }
 

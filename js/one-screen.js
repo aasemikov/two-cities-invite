@@ -29,8 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
       progress = 1;
     }
 
-    console.log(progress);
-
     // Логика анимации (перемещение + повороты) через каждые 50px
     if (Math.abs(scrollBottom - lastScrollForAnimation) >= animationInterval) {
       // Дискретное перемещение (каждые 50px)
