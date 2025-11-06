@@ -49,8 +49,45 @@ function initCarAnimation() {
     });
 }
 
+function initSamoletAnim() {
+    const samolet = document.getElementsByClassName("four-samolet")[0];
+    const line = document.getElementsByClassName("four-line")[0];
+
+    window.addEventListener("scroll", () => {
+        const lineRect = line.getBoundingClientRect();
+        const startLine = lineRect.top;
+        const endLine = lineRect.bottom;
+        const lineHeight = lineRect.height;
+        const middle = Math.floor(window.innerHeight / 2);
+
+        // Если линия в зоне видимости
+        if (startLine <= middle && endLine >= middle) {
+            // Вычисляем прогресс скролла относительно линии
+            const progress = (middle - startLine) / lineHeight;
+
+            // Перемещаем самолетик по линии пропорционально скроллу
+            const planePosition = progress * lineHeight;
+            samolet.style.transform = `translate(-50%, ${
+                planePosition - 25
+            }px)`;
+        }
+        // Если дошли до начала линии
+        else if (startLine > middle) {
+            samolet.style.transform = `translate(-50%, -25px)`;
+        }
+        // Если проскроллили за конец линии
+        else if (endLine < middle) {
+            samolet.style.transform = `translate(-50%, ${lineHeight - 25}px)`;
+        }
+    });
+}
+
+// Инициализация
+initSamoletAnim();
+
 // Запускаем загрузку, затем инициализируем анимацию
 window.addEventListener("load", async () => {
     await realLoading();
     initCarAnimation();
+    initSamoletAnim();
 });
