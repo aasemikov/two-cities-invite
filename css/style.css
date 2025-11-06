@@ -468,6 +468,9 @@ section {
     justify-content: space-between;
     gap: 21px;
 }
+.the-end {
+    
+}
 
 /* адаптив планшеты */
 @media screen and (max-width: 1024px) {
