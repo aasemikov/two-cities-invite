@@ -3,6 +3,12 @@ document.getElementById("button").addEventListener("click", async function () {
     const additionalGuests = document.getElementById("with").value;
     const yourServerUrl = "https://api.wedding.sem-a.ru/guests";
 
+    // Проверка заполнения обязательных полей
+    if (!guestName.trim()) {
+        alert("Пожалуйста, введите ваше имя");
+        return;
+    }
+
     const formData = {
         name: guestName,
         with_guests: additionalGuests,
@@ -20,14 +26,21 @@ document.getElementById("button").addEventListener("click", async function () {
         const result = await response.json();
 
         if (response.ok) {
-            alert("Отлично! Ваш ответ записан.");
-            document.getElementById("name").value = "";
-            document.getElementById("with").value = "";
+            // Перенаправляем на страницу успеха с именем гостя
+            window.location.href = `success.html?status=success&name=${encodeURIComponent(
+                guestName
+            )}`;
         } else {
-            alert("Ошибка: " + result.error);
+            // Перенаправляем на страницу ошибки
+            window.location.href = `success.html?status=error&error=${encodeURIComponent(
+                result.error || "Неизвестная ошибка"
+            )}`;
         }
     } catch (error) {
         console.error("Ошибка:", error);
-        alert("Ошибка сети. Попробуйте еще раз.");
+        // Перенаправляем на страницу ошибки при проблемах с сетью
+        window.location.href = `success.html?status=error&error=${encodeURIComponent(
+            "Ошибка сети. Попробуйте еще раз."
+        )}`;
     }
 });

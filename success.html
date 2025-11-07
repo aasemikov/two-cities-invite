@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Montserrat Regular 400 Roman and Italic -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital@0;1&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Стили -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/font.css" />
+        <link rel="stylesheet" href="css/style.css" />
+
+        <style>
+            .result-container {
+                text-align: center;
+                padding: 50px 20px;
+            }
+            .success-icon {
+                font-size: 80px;
+                color: #4caf50;
+                margin-bottom: 30px;
+            }
+            .error-icon {
+                font-size: 80px;
+                color: #ff4c00;
+                margin-bottom: 30px;
+            }
+            .back-button {
+                display: inline-block;
+                margin-top: 30px;
+                padding: 12px 30px;
+                background-color: #ff4c00;
+                color: white;
+                text-decoration: none;
+                border-radius: 7px;
+                font-weight: 600;
+                transition: background-color 0.3s;
+            }
+            .back-button:hover {
+                background-color: #e04500;
+            }
+        </style>
+
+        <title>Результат отправки</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <h1 class="title text-align-center" id="page-title">
+                    РЕЗУЛЬТАТ ОТПРАВКИ
+                </h1>
+            </div>
+        </header>
+
+        <main style="margin-top: 42px">
+            <div class="container">
+                <div class="result-container">
+                    <div id="success-content" style="display: none">
+                        <div class="success-icon">✓</div>
+                        <h2
+                            class="title"
+                            style="color: #4caf50; margin-bottom: 20px"
+                        >
+                            УСПЕШНО ОТПРАВЛЕНО!
+                        </h2>
+                        <p
+                            class="text"
+                            style="font-size: 18px; margin-bottom: 10px"
+                        >
+                            Спасибо,
+                            <span
+                                id="guest-name"
+                                style="font-weight: 700"
+                            ></span
+                            >!
+                        </p>
+                        <p class="text" style="margin-bottom: 20px">
+                            Ваш ответ успешно записан. Мы очень рады, что вы
+                            сможете разделить с нами этот особенный день!
+                        </p>
+                        <p
+                            class="text"
+                            style="font-style: italic; margin-bottom: 30px"
+                        >
+                            Ждём вас на нашей свадьбе!
+                        </p>
+                    </div>
+
+                    <div id="error-content" style="display: none">
+                        <div class="error-icon">✗</div>
+                        <h2
+                            class="title"
+                            style="color: #ff4c00; margin-bottom: 20px"
+                        >
+                            ОШИБКА ОТПРАВКИ
+                        </h2>
+                        <p
+                            class="text"
+                            style="font-size: 18px; margin-bottom: 10px"
+                            id="error-message"
+                        >
+                            Произошла ошибка при отправке формы.
+                        </p>
+                        <p class="text" style="margin-bottom: 30px">
+                            Пожалуйста, попробуйте ещё раз или свяжитесь с нами
+                            напрямую.
+                        </p>
+                    </div>
+
+                    <a href="index.html" class="back-button"
+                        >ВЕРНУТЬСЯ НА ГЛАВНУЮ</a
+                    >
+                </div>
+            </div>
+        </main>
+
+        <script>
+            // Получаем параметры из URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const status = urlParams.get("status");
+            const name = urlParams.get("name");
+            const error = urlParams.get("error");
+
+            if (status === "success") {
+                document.getElementById("success-content").style.display =
+                    "block";
+                document.getElementById("page-title").textContent =
+                    "УСПЕШНАЯ ОТПРАВКА";
+                if (name) {
+                    document.getElementById("guest-name").textContent = name;
+                }
+            } else if (status === "error") {
+                document.getElementById("error-content").style.display =
+                    "block";
+                document.getElementById("page-title").textContent =
+                    "ОШИБКА ОТПРАВКИ";
+                if (error) {
+                    document.getElementById("error-message").textContent =
+                        error;
+                }
+            } else {
+                // Если нет параметров, показываем ошибку
+                document.getElementById("error-content").style.display =
+                    "block";
+            }
+        </script>
+    </body>
+</html>
